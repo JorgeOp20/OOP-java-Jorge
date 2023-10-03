@@ -1,5 +1,14 @@
 package es.netmind.maquinacafe.modelos;
 
+import lombok.AllArgsConstructor;
+import lombok.Getter;
+import lombok.Setter;
+import lombok.ToString;
+
+@Setter
+@Getter
+@ToString
+
 public class Capsula {
     private int identificador;
     private String marca;
@@ -53,28 +62,13 @@ public class Capsula {
         return this.estado;
     }
 
-    public int getIdentificador() {
-        return identificador;
-    }
 
     public void setIdentificador(int identificador) {
         this.identificador = identificador;
     }
 
-    public String getMarca() {
-        return marca;
-    }
-
-    public String getTipoCafe() {
-        return tipoCafe;
-    }
-
     public void setTipoCafe(String tipoCafe) {
         this.tipoCafe = tipoCafe;
-    }
-
-    public Empleado getEmpleado() {
-        return empleado;
     }
 
     public void setEmpleado(Empleado empleado) {
@@ -83,23 +77,4 @@ public class Capsula {
         if(valido) this.empleado = empleado;
     }
 
-    public double getPrecio() {
-        return precio;
-    }
-
-    public boolean isEstado() {
-        return estado;
-    }
-
-    @Override
-    public String toString() {
-        return "es.netmind.maquinacafe.modelos.Capsula{" +
-                "identificador=" + identificador +
-                ", marca='" + marca + '\'' +
-                ", tipoCafe='" + tipoCafe + '\'' +
-                ", empleado='" + empleado + '\'' +
-                ", precio=" + precio +
-                ", estado=" + estado +
-                '}';
-    }
 }
